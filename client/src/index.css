@@ -1,16 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 @import "tailwindcss";
 
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
-
-*{
-    font-family: "Outfit", sans-serif;
+* {
+  font-family: "Outfit", sans-serif;
 }
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-.no-scrollbar {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;     /* Firefox */
-}
+/* .no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+} */
