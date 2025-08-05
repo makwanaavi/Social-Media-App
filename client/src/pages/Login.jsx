@@ -1,8 +1,9 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { Star } from "lucide-react";
+import { SignedIn, SignIn } from "@clerk/clerk-react";
 
-const LoginPage = () => {
+const Login = () => {
   return (
     <div className="min-h-screen flex flex-col md:flex-row">
       {/*BackGround Image*/}
@@ -33,7 +34,7 @@ const LoginPage = () => {
                       key={i}
                       className="size-4 md:size-4.5 text-transparent fill-amber-500"
                     />
-                  ))} 
+                  ))}
               </div>
               <p>Used By 12+ Developers</p>
             </div>
@@ -42,19 +43,20 @@ const LoginPage = () => {
           <h1 className="text-3xl md:text-6xl md:pb-2 font-bold bg-gradient-to-r from-indigo-950 to-indigo-800 bg-clip-text text-transparent">
             More than just friends truly connect
           </h1>
-          <p className="text-xl md:text-3xl text-indigo-900 max-w-72 md:max-w-md">Connect with global community on pingup.</p>
+          <p className="text-xl md:text-3xl text-indigo-900 max-w-72 md:max-w-md">
+            Connect with global community on pingup.
+          </p>
         </div>
         <span className="md:h-10"></span>
       </div>
 
-
       {/*right-side*/}
 
       <div className="flex-1 flex items-center justify-center p-6 sm:p-10">
-
+        <SignIn />
       </div>
     </div>
   );
 };
 
-export default LoginPage;
+export default Login;

@@ -1,19 +1,22 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import LoginPage from "./pages/Login";
-import FeedPage from "./pages/FeedPage";
+import FeedPage from "./pages/Feed";
 import Messages from "./pages/Messages";
 import ChatBox from "./pages/ChatBox";
 import Connection from "./pages/Connection";
 import DiscoverPage from "./pages/Discover";
 import Profile from "./pages/Profile";
 import CreatePost from "./pages/CreatePost";
+import Login from "./pages/Login";
+import Layout from "./pages/Layout";
+import { useUser } from "@clerk/clerk-react";
 
 const App = () => {
+  const { user } = useUser();
   return (
     <>
       <Routes>
-        <Route path="/" element={<LoginPage />}>
+        <Route path="/" element={!user ? <Login /> : <Layout />}>
           <Route index element={<FeedPage />} />
           <Route path="messages" element={<Messages />} />
           <Route path="messages/:userId" element={<ChatBox />} />
