@@ -9,6 +9,11 @@
   display: none;
 }
 
+
+::selection {
+  background-color: #fcd34d;
+  color: white;
+}
 /* .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
