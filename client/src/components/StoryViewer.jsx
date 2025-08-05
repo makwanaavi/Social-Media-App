@@ -10,7 +10,7 @@ const StoryViewer = ({ viewStory, setViewStory }) => {
     if (viewStory && viewStory.media_type !== "video") {
       setProgress(0);
 
-      const duration = 5000; // 5 seconds for text stories
+      const duration = 7000; // 7 seconds for text stories
       const setTime = 100; // 100ms intervals
       let elapsed = 0; // elapsed time in ms
 
