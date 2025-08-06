@@ -1,8 +1,11 @@
 import React from "react";
 import { dummyConnectionsData } from "../assets/assets";
 import { Eye, MessagesSquare } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 const Messages = () => {
+
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen relative bg-slate-50">
       <div className="max-w-6xl mx-auto p-6">
@@ -34,12 +37,13 @@ const Messages = () => {
                   className="size-10 flex items-center justify-center text-sm rounded bg-slate-100 hover:bg-slate-200 text-slate-800 
                 active:scale-95 transition cursor-pointer gap-1"
                 >
-                  <MessagesSquare className="w-4 h-4" />
+                  <MessagesSquare className="w-4 h-4" onClick={() => navigate(`/messages/${user._id}`)} />
                 </button>
 
                 <button
                   className="size-10 flex items-center justify-center text-sm rounded bg-slate-100 hover:bg-slate-200 text-slate-800 
                 active:scale-95 transition cursor-pointer gap-1"
+                onClick={() => navigate(`/profile/${user._id}`)}
                 >
                   <Eye className="w-4 h-4" />
                 </button>
